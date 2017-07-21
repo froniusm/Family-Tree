@@ -21,5 +21,19 @@ namespace FamilyTree.Controllers
         {
             return View("Index");
         }
+
+        public ActionResult PersonOne(Person p)
+        {
+            Person one = new Person();
+            one.FirstName = p.FirstName;
+            one.MiddleInitial = p.MiddleInitial;
+            one.LastName = p.LastName;
+            one.BirthDate = p.BirthDate;
+            one.IsAlive = p.IsAlive;
+            one.DeathDate = p.DeathDate;
+            one.Gender = p.Gender;
+
+            return View("PersonOne", one);
+        }
     }
 }
